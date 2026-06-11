@@ -36,3 +36,25 @@ GROUP BY Outlet_Identifier
 ORDER BY total_revenue DESC
 LIMIT 5;
 
+-- For each Outlet_Type, rank items by total sales (highest first)
+SELECT
+  Outlet_Type,Item_identifier,Item_type,total_sales,
+  RANK() OVER (PARTITION BY Outlet_Type ORDER BY total_sales DESC) AS sales_rank
+FROM (
+  SELECT Outlet_Type, Item_identifier, Item_type, SUM(total_Sales) AS total_sales
+  FROM smart_bazaar
+  GROUP BY Outlet_Type, Item_identifier, Item_type) s
+ORDER BY Outlet_Type, sales_rank;
+
+--Top 3 highest-selling products within each product category
+With RankedSales AS (
+Select 
+Item_Type,
+Item_Identifier,
+Total_Sales,
+DENSE_RANK() OVER (PARTITION BY Item_Type ORDER BY Total_Sales DESC) as Sales_Rank
+FROM smart_bazaar)
+SELECT *FROM RankedSales
+WHERE Sales_Rank<=3;
+
+
