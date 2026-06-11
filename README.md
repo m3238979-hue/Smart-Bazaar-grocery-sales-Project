@@ -1,5 +1,5 @@
-### Smart-Bazaar-grocery-sales-Project
-is an  analytics project focused on analyzing the sales performance of Smart-Bazaar. This project leverages Excel, SQL, and Power BI to clean data, extract business insights, and build an interactive dashboard for stakeholders.
+## Smart-Bazaar-grocery-sales-Project
+ It is an  analytics project focused on analyzing the sales performance of Smart-Bazaar. This project leverages Excel, SQL, and Power BI to clean data, extract business insights, and build an interactive dashboard for stakeholders.
 
 
  Project Overview :
