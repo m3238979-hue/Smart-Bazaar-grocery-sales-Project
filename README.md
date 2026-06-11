@@ -12,5 +12,5 @@ Through SQL queries and Power BI visuals this project answers:
 1. Total sales and average sales per item for each Item_Type
 2. Total number of items sold per Outlet_Location_Type
 3. Top 5 outlets with highest total revenue
-4 .Max, min, avg Item_Outlet_Sales for each Outlet_Type
+4.Max, min, avg Item_Outlet_Sales for each Outlet_Type
 5. For each Outlet_Type, rank items by total sales (highest first)
