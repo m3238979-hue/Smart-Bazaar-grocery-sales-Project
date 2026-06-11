@@ -10,13 +10,7 @@ How I Plan On Solving the Problem: In helping smart Bazaar gather valuable insig
 Key Business Questions Answered
 Through SQL queries and Power BI visuals this project answers:
 1. Total sales and average sales per item for each Item_Type
-2. SELECT
-  Item_Type,
-  SUM(total_Sales) AS total_sales,
-  AVG(total_Sales) AS avg_sales_per_item
-FROM smart_bazaar
-GROUP BY Item_Type
-ORDER BY total_sales DESC;
+
 3. Total number of items sold per Outlet_Location_Type
 4. Top 5 outlets with highest total revenue
 5. Max, min, avg Item_Outlet_Sales for each Outlet_Type
