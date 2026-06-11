@@ -9,7 +9,7 @@ How I Plan On Solving the Problem: In helping smart Bazaar gather valuable insig
 
 Key Business Questions Answered
 Through SQL queries and Power BI visuals this project answers:
-1. Total sales and average sales per item for each Item_Type
+##1. Total sales and average sales per item for each Item_Type
 ```sql
 SELECT
   Item_Type,
@@ -21,12 +21,12 @@ GROUP BY
   Item_Type
 ORDER BY 
   total_sales DESC;
-
-
-
-
+```
+Result
+This query helps the business understand which item categories generate the most revenue and how much, on average, each item sells. It identifies top-performing item types, highlights low-selling categories, and supports decisions on inventory planning, promotions, and pricing strategy.
 2. Total number of items sold per Outlet_Location_Type
-3. Top 5 outlets with highest total revenue
-4. Max, min, avg Item_Outlet_Sales for each Outlet_Type
-5. For each Outlet_Type, rank items by total sales (highest first)
+
+4. Top 5 outlets with highest total revenue
+5. Max, min, avg Item_Outlet_Sales for each Outlet_Type
+6. For each Outlet_Type, rank items by total sales (highest first)
 Top 3 highest-selling products within each product category
