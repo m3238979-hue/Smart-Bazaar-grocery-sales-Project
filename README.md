@@ -9,7 +9,7 @@ How I Plan On Solving the Problem: In helping smart Bazaar gather valuable insig
 
 Key Business Questions Answered
 Through SQL queries and Power BI visuals this project answers:
-##1. Total sales and average sales per item for each Item_Type
+## 1. Total sales and average sales per item for each Item_Type
 ```sql
 SELECT
   Item_Type,
