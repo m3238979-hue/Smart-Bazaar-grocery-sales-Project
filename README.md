@@ -26,7 +26,7 @@ Result
 This query helps the business understand which item categories generate the most revenue and how much, on average, each item sells. It identifies top-performing item types, highlights low-selling categories, and supports decisions on inventory planning, promotions, and pricing strategy.
 
 ## 2. Total number of items sold per Outlet_Location_Type
-```
+```sql
 SELECT
     Outlet_Location_Type,
     SUM(Item_Weight) AS total_weight
@@ -38,7 +38,7 @@ Result
 This query shows which outlet locations handle the highest volume of products by total item weight. It helps the business understand demand patterns across different locations, so they can make better decisions about stock distribution, logistics planning, and resource allocation.
 
 ## 3. Top 5 outlets with highest total revenue
-```
+```sql
 SELECT
   Outlet_Identifier,      
   SUM(total_Sales) AS total_revenue
@@ -51,7 +51,7 @@ Result
 This query identifies the top 5 outlets generating the highest revenue. It helps the business focus on best-performing stores, understand what drives their success, and use those insights for strategy, resource allocation, and expansion planning.
 
 ## 4. Max, min, avg Item_Outlet_Sales for each Outlet_Type
-```
+```sql
 SELECT 
     outlet_type,
     MIN(total_sales) AS min_sale,
@@ -65,7 +65,7 @@ Result
 This query helps compare sales performance across different outlet types by showing their minimum, maximum, and average sales. It allows the business to identify high-performing outlet formats, detect underperforming ones, and make decisions on investment, improvements, or expansion based on outlet performance trends.
 
 ## 5. For each Outlet_Type, rank items by total sales (highest first)
-```
+```sql
 SELECT
   Outlet_Type,Item_identifier,Item_type,total_sales,
   RANK() OVER (PARTITION BY Outlet_Type ORDER BY total_sales DESC) AS sales_rank
@@ -79,7 +79,7 @@ Result
 This query ranks items by total sales within each outlet type, showing which products perform best in each store format. It helps the business identify top-selling items per outlet category, optimize store-specific inventory, and tailor promotions or product placement based on what sells the most in each outlet type.
 
 ## 6.Top 3 highest-selling products within each product category
-```
+```sql
 With RankedSales AS (
 Select 
 Item_Type,
