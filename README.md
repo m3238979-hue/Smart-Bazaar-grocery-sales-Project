@@ -78,7 +78,7 @@ ORDER BY Outlet_Type, sales_rank;
 Result
 This query ranks items by total sales within each outlet type, showing which products perform best in each store format. It helps the business identify top-selling items per outlet category, optimize store-specific inventory, and tailor promotions or product placement based on what sells the most in each outlet type.
 
-##6.Top 3 highest-selling products within each product category
+## 6.Top 3 highest-selling products within each product category
 ```
 With RankedSales AS (
 Select 
